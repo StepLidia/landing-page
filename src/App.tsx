@@ -26,21 +26,14 @@ function App() {
           <div className="absolute inset-0 bg-linear-to-r from-black/10 via-black/30 to-black/75" />
         </div>
 
-        <div className="relative z-10 grid min-h-[calc(100vh-80px)] grid-cols-1 items-center gap-10 md:grid-cols-2">
-          <div className="order-2 md:order-1">
-            <div className="aspect-4/5 max-h-180 overflow-hidden rounded-4xl border border-white/10 bg-white/5 shadow-2xl">
-              <div className="flex h-full items-center justify-center text-white/40">
-                Cyber girl video here
-              </div>
-            </div>
-          </div>
+        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-80px)] max-w-350 items-center">
 
-          <div className="order-1 md:order-2">
+          <div className=" ml-auto max-w-2xl">
             <p className="mb-5 text-lg uppercase tracking-[0.35em] text-cyan-500/80">
               Software Engineer
             </p>
 
-            <h1 className="max-w-2xl text-3xl font-semibold leading-tight">
+            <h1 className="text-3xl font-semibold leading-tight">
               Building digital systems of the future.
             </h1>
 
