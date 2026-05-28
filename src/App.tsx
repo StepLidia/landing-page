@@ -1,4 +1,8 @@
+import { useState } from 'react';
+
 function App() {
+  const [introFinished, setIntroFinished] = useState(false);
+
   return (
     <main className="min-h-screen bg-[#050510] text-white">
       <section className="relative min-h-screen overflow-hidden px-8 py-6">
@@ -15,11 +19,14 @@ function App() {
 
         <div className="absolute inset-0 z-0">
           <video
+            key={introFinished ? 'idle' : 'intro'}
             className="h-full w-full object-cover"
-            src="/videos/cyber-woman-intro.webm"
+            src={introFinished ? "/videos/cyber-woman-idle.webm" : "/videos/cyber-woman-intro.webm"}
             autoPlay
             muted
             playsInline
+            loop={introFinished}
+            onEnded={() => setIntroFinished(true)}
           />
 
           <div className="absolute inset-0 bg-black/35" />
