@@ -19,17 +19,28 @@ function App() {
 
         <div className="absolute inset-0 z-0">
           <video
-            key={introFinished ? 'idle' : 'intro'}
-            className="h-full w-full object-cover"
-            src={introFinished ? "/videos/cyber-woman-idle.webm" : "/videos/cyber-woman-intro.webm"}
+            className={`absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-500 ${introFinished ? 'opacity-0' : 'opacity-100'
+              }`}
+            src="/videos/cyber-woman-intro.webm"
             autoPlay
             muted
             playsInline
-            loop={introFinished}
+            preload="auto"
             onEnded={() => setIntroFinished(true)}
           />
 
-          <div className="absolute inset-0 bg-black/35" />
+          <video
+            className={`absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-500 ${introFinished ? 'opacity-100' : 'opacity-0'
+              }`}
+            src="/videos/cyber-woman-idle.webm"
+            autoPlay
+            muted
+            playsInline
+            loop
+            preload="auto"
+          />
+
+          <div className="absolute inset-0 bg-black/15" />
           <div className="absolute inset-0 bg-linear-to-r from-black/10 via-black/30 to-black/75" />
         </div>
 
@@ -60,7 +71,6 @@ function App() {
           </div>
         </div>
 
-        <div className="absolute left-1/2 top-1/2 h-175 w-175 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/20 blur-[140px]" />
       </section>
     </main>
   );
