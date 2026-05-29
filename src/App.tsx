@@ -1,16 +1,30 @@
 import { useState } from 'react';
+import { HeroContent } from './components/HeroContent';
+import { AboutContent } from './components/AboutContent';
 
 function App() {
   const [introFinished, setIntroFinished] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+  const contentPositionClass = activeSection === 'home' ? 'items-center' : 'items-start pt-16 md:pt-24';
 
   return (
     <main className="min-h-screen bg-[#050510] text-white">
       <section className="relative min-h-screen overflow-hidden px-8 py-6">
         <nav className="relative z-10 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div className="text-lg font-semibold tracking-wide">Lidia Stepanova</div>
+          <div
+            onClick={() => setActiveSection('home')}
+            className="cursor-pointer text-lg font-semibold tracking-wide transition-colors hover:text-cyan-300"
+          >
+            Lidia Stepanova
+          </div>
 
           <div className="flex gap-6 text-base text-white/70 md:absolute md:left-1/2 md:-translate-x-1/2 md:gap-8 md:text-lg">
-            <a href="#about" className="hover:text-white">About</a>
+            <button
+              onClick={() => setActiveSection('about')}
+              className="hover:text-white"
+            >
+              About
+            </button>
             <a href="#projects" className="hover:text-white">Projects</a>
             <a href="#contact" className="hover:text-white">Contact</a>
           </div>
@@ -43,30 +57,11 @@ function App() {
           <div className="absolute inset-0 bg-linear-to-r from-black/10 via-black/30 to-black/75" />
         </div>
 
-        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-80px)] max-w-350 items-center">
+        <div className={`relative z-10 mx-auto flex min-h-[calc(100vh-80px)] max-w-350 ${contentPositionClass}`}>
 
           <div className=" ml-auto max-w-2xl">
-            <p className="mb-5 text-lg uppercase tracking-[0.35em] text-cyan-500/80">
-              Software Engineer
-            </p>
-
-            <h1 className="text-3xl font-semibold leading-tight">
-              Building digital systems of the future.
-            </h1>
-
-            <p className="mt-6 max-w-xl text-lg leading-8 text-white/65">
-              Personal landing page for software engineering, AI experiments,
-              scientific ideas, and visual digital projects.
-            </p>
-
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black">
-                View projects
-              </a>
-              <a className="rounded-full border border-white/20 px-6 py-3 text-sm text-white/80 hover:bg-white/10">
-                Contact me
-              </a>
-            </div>
+            {activeSection === 'home' && <HeroContent />}
+            {activeSection === 'about' && <AboutContent />}
           </div>
         </div>
 
