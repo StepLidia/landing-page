@@ -1,27 +1,43 @@
+import { TechnologyBadges } from "../components/TechnologyBadges";
+
 export function ProjectsPage() {
   return (
     <div className="relative z-10 mx-auto mt-20 max-w-350 pb-24">
-      <p className="mb-5 text-sm uppercase tracking-[0.35em] text-cyan-300/80">
+      <p className="mb-5 text-lg uppercase tracking-[0.35em] text-cyan-300/80">
         Projects
       </p>
 
-      <h1 className="max-w-4xl text-5xl font-semibold leading-tight md:text-7xl">
-        Selected engineering and creative work
+      <h1 className="max-w-4xl text-3xl font-semibold leading-tight">
+        Commercial development
       </h1>
 
       <div className="mt-20 space-y-24">
         <ProjectItem
-          image="/images/exlibris.png"
-          title="Solar Profitability Estimator"
-          description="A web application for estimating solar panel profitability, focused on practical engineering assumptions, financial modelling, and clear user-facing calculations."
-          technologies={['.NET', 'React', 'TypeScript', 'SQL Server', 'Docker']}
+          image="/images/exlibris.webp"
+          title="Ex Libris E-Commerce Platform"
+          websiteUrl="https://www.exlibris.ch"
+          description="Worked on the backend systems and administrative tools supporting the day-to-day operation of a large online book retailer. Responsibilities included developing and maintaining .NET APIs, database design and optimization, supplier data integrations, and tools for importing, validating, and exporting large volumes of book metadata. 
+          Contributed to inventory management, order processing workflows, catalog synchronization, data quality improvements, and operational automation. Collaborated closely with business stakeholders to deliver reliable solutions supporting e-commerce operations, supplier onboarding, and internal administration processes."
+          technologies={['.NET', 'TypeScript', 'Web API', 'SQL Server', 'EF Core', 'Docker', 'OpenShift']}
         />
 
         <ProjectItem
-          image="/images/comparis.png"
-          title="Personal Cyber Landing Page"
-          description="A cinematic personal landing page combining React, Tailwind CSS, AI-generated video, responsive layout, and modern cyberpunk-inspired visual design."
-          technologies={['React', 'Vite', 'Tailwind CSS', 'TypeScript']}
+          image="/images/comparis.webp"
+          title="Comparis Real Estate Lead Management Platform"
+          websiteUrl="https://en.comparis.ch/immobilien/verkaufen/immobilie-bewerten"
+          description="Worked on the backend systems powering Comparis' real estate lead management platform. The system handled the intake, distribution, tracking, and administrative management of property owner leads generated through online property valuation services.
+          Developed APIs and business workflows responsible for processing incoming leads, matching them to partner realtors, managing lead lifecycles, and supporting operational processes through an ERP-style administration platform. Contributed to system reliability, data quality, workflow automation, and the integration of business-critical services supporting thousands of real estate transactions."
+          technologies={['.NET', 'TypeScript', 'Web API', 'SQL Server', 'EF Core', 'Docker', 'Azure']}
+        />
+
+        <ProjectItem
+          image="/images/hbl.webp"
+          title="HBL Mortgage Management Platform"
+          websiteUrl="https://www.hbl.ch/de/private/finanzieren/hypotheken/"
+          description="Contributed to the full-stack development of a mortgage management platform supporting the complete lifecycle of mortgage applications, from initial customer submission through assessment, approval, and contract preparation.
+          Developed modern web-based workflows that replaced spreadsheet-driven processes, improving transparency, consistency, and operational efficiency across mortgage processing activities. Implemented business logic, financial calculations, document workflows, and user interfaces supporting both customer-facing and internal banking operations.
+          Worked closely with business stakeholders to translate complex mortgage and lending requirements into reliable software solutions, focusing on usability, maintainability, and process automation within a highly regulated financial environment."
+          technologies={['.NET', 'TypeScript', 'Web API', 'SQL Server', 'EF Core', 'Docker', 'Azure', 'Azure DevOps']}
         />
       </div>
     </div>
@@ -33,6 +49,7 @@ type ProjectItemProps = {
   title: string;
   description: string;
   technologies: string[];
+  websiteUrl?: string;
 };
 
 function ProjectItem({
@@ -40,14 +57,16 @@ function ProjectItem({
   title,
   description,
   technologies,
+  websiteUrl,
 }: ProjectItemProps) {
   return (
-    <article className="grid gap-10 md:grid-cols-2 md:items-center">
+    <article className="grid gap-10 md:grid-cols-[1fr_1.8fr] md:items-start">
       <div className="overflow-hidden rounded-4xl border border-white/10 bg-white/5 shadow-2xl">
         <img
           src={image}
+          loading="lazy"
           alt={title}
-          className="h-full w-full object-cover"
+          className="aspect-video h-auto w-full object-cover"
         />
       </div>
 
@@ -56,19 +75,23 @@ function ProjectItem({
           {title}
         </h2>
 
-        <p className="mt-5 text-lg leading-8 text-white/80">
+        {websiteUrl && (
+          <a
+            href={websiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-block text-lg text-cyan-300 transition-colors hover:text-cyan-200"
+          >
+            {websiteUrl.replace('https://', '')} ↗
+          </a>
+        )}
+
+        <p className="mt-5 text-lg text-justify leading-8 text-white/80">
           {description}
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
-          {technologies.map((technology) => (
-            <span
-              key={technology}
-              className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-200 shadow-[0_0_20px_rgba(34,211,238,0.15)] backdrop-blur"
-            >
-              {technology}
-            </span>
-          ))}
+          <TechnologyBadges technologies={technologies} />
         </div>
       </div>
     </article>
