@@ -1,11 +1,17 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { HeroContent } from './components/HeroContent';
 import { AboutContent } from './components/AboutContent';
 
 function App() {
   const [introFinished, setIntroFinished] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const idleVideoRef = useRef<HTMLVideoElement>(null);
   const contentPositionClass = activeSection === 'home' ? 'items-center' : 'items-start pt-16 md:pt-24';
+
+  function handleIntroEnded() {
+    setIntroFinished(true);
+    idleVideoRef.current?.play();
+  }
 
   return (
     <main className="min-h-screen bg-[#050510] text-white">
@@ -39,14 +45,14 @@ function App() {
             muted
             playsInline
             preload="auto"
-            onEnded={() => setIntroFinished(true)}
+            onEnded={handleIntroEnded}
           />
 
           <video
+            ref={idleVideoRef}
             className={`absolute inset-0 h-full w-full object-cover object-top-left transition-opacity duration-1200 ${introFinished ? 'opacity-100' : 'opacity-0'
               }`}
             src="/videos/cyber-woman-idle.webm"
-            autoPlay
             muted
             playsInline
             loop

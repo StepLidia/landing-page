@@ -20,7 +20,7 @@ export function AboutContent() {
       </h1>
 
       <p className="mt-6 text-justify text-lg leading-8 text-white/85">
-        I'm a full-stack software engineer with more than 10 years of professional
+        Hi, my name is Lidia and I'm a full-stack software engineer with more than 10 years of professional
         experience designing and building modern software systems. I hold a Master's
         degree in Computational Science from École Polytechnique Fédérale de Lausanne, Switzerland
         and have worked on projects ranging from scientific and engineering applications to enterprise-grade financial,
