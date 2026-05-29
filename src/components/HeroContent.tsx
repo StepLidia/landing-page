@@ -10,7 +10,7 @@ export function HeroContent() {
       </h1>
 
       <p className="mt-6 max-w-xl text-lg leading-8 text-white/65">
-        Personal landing page for software engineering, AI experiments,
+        Personal page for software engineering, AI experiments,
         scientific ideas, and visual digital projects.
       </p>
 

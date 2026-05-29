@@ -18,7 +18,7 @@ function App() {
             Lidia Stepanova
           </div>
 
-          <div className="flex gap-6 text-base text-white/70 md:absolute md:left-1/2 md:-translate-x-1/2 md:gap-8 md:text-lg">
+          <div className="flex gap-6 text-base text-white/85 md:absolute md:left-1/2 md:-translate-x-1/2 md:gap-8 md:text-lg">
             <button
               onClick={() => setActiveSection('about')}
               className="hover:text-white"

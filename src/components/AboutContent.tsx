@@ -19,15 +19,15 @@ export function AboutContent() {
         Biography and experience
       </h1>
 
-      <p className="mt-6 text-justify text-lg leading-8 text-white/70">
+      <p className="mt-6 text-justify text-lg leading-8 text-white/85">
         I'm a full-stack software engineer with more than 10 years of professional
         experience designing and building modern software systems. I hold a Master's
-        degree from EPFL and have worked on projects ranging from scientific and
-        engineering applications to enterprise-grade financial, real estate and e-commerce
-        platforms.
+        degree in Computational Science from École Polytechnique Fédérale de Lausanne, Switzerland
+        and have worked on projects ranging from scientific and engineering applications to enterprise-grade financial,
+        real estate and e-commerce platforms.
       </p>
 
-      <p className="mt-6 text-justify text-lg leading-8 text-white/70">
+      <p className="mt-6 text-justify text-lg leading-8 text-white/85">
         Throughout my career, I have developed solutions using .NET, Entity Framework
         Core, SQL Server, React, TypeScript, JavaScript, Tailwind CSS, Docker,
         Kubernetes, Azure, and modern DevOps practices. My experience spans both
@@ -35,7 +35,7 @@ export function AboutContent() {
         including testing, cloud infrastructure, project delivery, and system design.
       </p>
 
-      <p className="mt-6 text-justify text-lg leading-8 text-white/70">
+      <p className="mt-6 text-justify text-lg leading-8 text-white/85">
         I enjoy analytical and numerical challenges, designing reliable architectures,
         and building practical engineering systems that solve real-world problems.
         Whether working on scientific software, financial platforms, e-commerce
