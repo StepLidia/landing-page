@@ -1,4 +1,7 @@
+import { Link, useNavigate } from 'react-router-dom';
+
 export function HeroContent() {
+  const navigate = useNavigate();
   return (
     <>
       <p className="mb-5 text-lg uppercase tracking-[0.35em] text-cyan-500/80">
@@ -15,12 +18,19 @@ export function HeroContent() {
       </p>
 
       <div className="mt-10 flex flex-wrap gap-4">
-        <a className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black">
+        <Link
+          to="/projects"
+          className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-white/90"
+        >
           View projects
-        </a>
-        <a className="rounded-full border border-white/20 px-6 py-3 text-sm text-white/80 hover:bg-white/10">
+        </Link>
+
+        <Link
+          to="/?section=contact"
+          className="rounded-full border border-white/20 px-6 py-3 text-sm text-white/80 transition-colors hover:bg-white/10"
+        >
           Contact me
-        </a>
+        </Link>
       </div>
     </>
   )

@@ -53,7 +53,7 @@ export function HomePage() {
         <div className="ml-auto max-w-2xl">
           {activeSection === 'home' && <HeroContent />}
           {activeSection === 'about' && <AboutContent />}
-          {activeSection === 'contact' && <div>Contact content later</div>}
+          {activeSection === 'contact' && <div>In progress</div>}
         </div>
       </div>
     </>
