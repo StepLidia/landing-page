@@ -23,12 +23,15 @@ export function ContactContent() {
       });
 
       const data = await response.json();
-      setResult(data.success ? 'Message sent successfully.' : 'Failed to send message.');
 
-      if (data.success) {
-        event.currentTarget.reset();
+      if (!response.ok || !data.success) {
+        setResult(data.message ?? 'Failed to send message.');
+        return;
       }
+
+      setResult('Message sent successfully.');
     } catch (error) {
+      console.error("Error submitting form:", error);
       setResult('Failed to send message.');
     } finally {
       setIsSubmitting(false);
