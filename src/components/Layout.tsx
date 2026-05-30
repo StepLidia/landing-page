@@ -33,6 +33,14 @@ export function Layout() {
 
           <button
             type="button"
+            onClick={() => navigate('/?section=collaboration')}
+            className="hover:text-white"
+          >
+            Collaboration
+          </button>
+
+          <button
+            type="button"
             onClick={() => navigate('/?section=contact')}
             className="hover:text-white"
           >

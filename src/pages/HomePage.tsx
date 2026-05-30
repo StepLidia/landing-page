@@ -2,6 +2,8 @@ import { useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { AboutContent } from '../components/AboutContent';
 import { HeroContent } from '../components/HeroContent';
+import { CollaborationContent } from '../components/CollaborationContent';
+import { ContactContent } from '../components/ContactContent';
 
 export function HomePage() {
   const [introFinished, setIntroFinished] = useState(false);
@@ -50,10 +52,11 @@ export function HomePage() {
       </div>
 
       <div className={`relative z-10 mx-auto flex min-h-[calc(100vh-80px)] max-w-350 ${contentPositionClass}`}>
-        <div className="ml-auto max-w-2xl">
+        <div className="ml-auto w-full max-w-2xl">
           {activeSection === 'home' && <HeroContent />}
           {activeSection === 'about' && <AboutContent />}
-          {activeSection === 'contact' && <div>In progress</div>}
+          {activeSection === 'collaboration' && <CollaborationContent />}
+          {activeSection === 'contact' && <ContactContent />}
         </div>
       </div>
     </>
