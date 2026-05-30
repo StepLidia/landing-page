@@ -40,7 +40,7 @@ export function HeroContent() {
         </Link>
       </div>
 
-      <div className="mt-10 max-w-xl rounded-3xl border border-white/20 bg-black/50 p-5 shadow-2xl backdrop-blur">
+      <div className="mt-10 max-w-xl min-h-60 rounded-3xl border border-white/20 bg-black/50 p-5 shadow-2xl backdrop-blur">
         <CyberTerminal />
       </div>
     </>

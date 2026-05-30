@@ -12,11 +12,6 @@ export function HomePage() {
 
   const activeSection = searchParams.get('section') ?? 'home';
 
-  const contentPositionClass =
-    activeSection === 'home'
-      ? 'items-center'
-      : 'items-start pt-16 md:pt-24';
-
   function handleIntroEnded() {
     setIntroFinished(true);
     idleVideoRef.current?.play();
@@ -51,7 +46,7 @@ export function HomePage() {
         <div className="absolute inset-0 bg-linear-to-r from-black/10 via-black/30 to-black/75" />
       </div>
 
-      <div className={`relative z-10 mx-auto flex min-h-[calc(100vh-80px)] max-w-350 ${contentPositionClass}`}>
+      <div className={`relative z-10 mx-auto flex min-h-[calc(100vh-80px)] max-w-350 items-start pt-16 md:pt-24`}>
         <div className="ml-auto w-full max-w-2xl">
           {activeSection === 'home' && <HeroContent />}
           {activeSection === 'about' && <AboutContent />}
