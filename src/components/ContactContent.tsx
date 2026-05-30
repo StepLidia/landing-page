@@ -41,7 +41,7 @@ export function ContactContent() {
   return (
     <form
       onSubmit={onSubmit}
-      className="mt-10 space-y-5 rounded-4xl border border-white/15 bg-white/10 p-6 shadow-2xl backdrop-blur"
+      className="space-y-5 rounded-4xl border border-white/15 bg-white/10 p-6 shadow-2xl backdrop-blur"
     >
       <div>
         <label className="mb-2 block text-base text-white/85">

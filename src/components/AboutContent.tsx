@@ -18,7 +18,7 @@ export function AboutContent() {
   return (
     <>
       <h1 className="text-3xl font-semibold leading-tight">
-        Biography and experience
+        Experience
       </h1>
 
       <p className="mt-6 text-justify text-lg leading-8 text-white/85">
