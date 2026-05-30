@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { CyberTerminal } from './CyberTerminal';
 
 export function HeroContent() {
   return (
@@ -29,7 +30,7 @@ export function HeroContent() {
           rel="noopener noreferrer"
           className="rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
         >
-          Download CV ⭳
+          Download CV ↓
         </a>
         <Link
           to="/?section=contact"
@@ -37,6 +38,10 @@ export function HeroContent() {
         >
           Contact me
         </Link>
+      </div>
+
+      <div className="mt-10 max-w-xl rounded-3xl border border-white/20 bg-black/50 p-5 shadow-2xl backdrop-blur">
+        <CyberTerminal />
       </div>
     </>
   )
