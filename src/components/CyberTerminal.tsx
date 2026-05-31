@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react';
 const terminalLines = [
   { text: 'Initializing portfolio interface...', color: 'text-neutral-400/70' },
   { text: 'Loading software engineering modules...', color: 'text-neutral-400/70' },
-  { text: 'Scanning projects: scientific, enterprise...10 projects found.', color: 'text-amber-400/70' },
+  { text: 'Scanning projects: scientific, enterprise...', color: 'text-violet-400/70' },
   { text: 'Contact form online found.', color: 'text-fuchsia-400/70' },
-  { text: 'Status: available for interesting problems...', color: 'text-cyan-400/70' },
+  { text: 'Status: available for interesting problems...', color: 'text-teal-400/70' },
 ];
 
 type TerminalLine = (typeof terminalLines)[number];

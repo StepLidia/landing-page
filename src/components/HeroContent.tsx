@@ -28,13 +28,13 @@ export function HeroContent() {
           href="/misc/CV_Enterprise_Stepanova.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
+          className="rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/20 bg-white/10 shadow-2xl backdrop-blur"
         >
           Download CV ↓
         </a>
         <Link
           to="/?section=contact"
-          className="rounded-full border border-white/20 px-6 py-3 text-sm text-white/80 transition-colors hover:bg-white/10"
+          className="rounded-full border border-white/20 px-6 py-3 text-sm text-white/80 transition-colors hover:bg-white/20 bg-white/10 shadow-2xl backdrop-blur"
         >
           Contact me
         </Link>
