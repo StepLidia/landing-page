@@ -10,10 +10,8 @@ export function CollaborationContent() {
       </h1>
 
       <p className="mt-6 text-justify text-lg leading-8 text-white/85">
-        Not every business problem fits into a crowded IT roadmap. Valuable ideas
-        often remain stuck in backlogs, compete with larger priorities, or require
-        lengthy approval processes before development can begin. I help organizations
-        quickly turn those ideas into practical software solutions.
+        Not every business idea makes it onto the IT roadmap.
+        I help organizations turn overlooked opportunities into practical software solutions.
       </p>
 
       <p className="mt-6 text-justify text-lg leading-8 text-white/85">

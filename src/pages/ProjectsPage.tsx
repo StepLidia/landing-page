@@ -17,11 +17,11 @@ export function ProjectsPage() {
       <div className="absolute inset-0 bg-linear-to-r from-black/10 via-black/70 to-black/85" />
 
       <div className="relative z-10 mx-auto mt-20 max-w-350 pb-24">
-        <p className="mb-5 text-lg uppercase tracking-[0.35em] text-cyan-300/80">
+        <p className="mb-5 inline-block bg-black/80 text-lg uppercase tracking-[0.35em] text-cyan-300/80">
           Projects
         </p>
 
-        <h1 className="max-w-4xl text-3xl font-semibold leading-tight">
+        <h1 className="block w-fit bg-black/80 max-w-4xl text-3xl font-semibold leading-tight">
           Commercial development
         </h1>
 
@@ -51,7 +51,7 @@ export function ProjectsPage() {
             description="Contributed to the full-stack development of a mortgage management platform supporting the complete lifecycle of mortgage applications, from initial customer submission through assessment, approval, and contract preparation.
           Developed modern web-based workflows that replaced spreadsheet-driven processes, improving transparency, consistency, and operational efficiency across mortgage processing activities. Implemented business logic, financial calculations, document workflows, and user interfaces supporting both customer-facing and internal banking operations.
           Worked closely with business stakeholders to translate complex mortgage and lending requirements into reliable software solutions, focusing on usability, maintainability, and process automation within a highly regulated financial environment."
-            technologies={['C#', '.NET Core', 'TypeScript', 'Web API', 'SQL Server', 'EF Core', 'Docker', 'Azure', 'Azure DevOps']}
+            technologies={['C#', '.NET Core', 'TypeScript', 'Web API', 'SQL Server', 'Docker', 'Azure', 'Azure DevOps']}
           />
 
           <ProjectItem
