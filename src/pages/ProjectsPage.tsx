@@ -27,6 +27,15 @@ export function ProjectsPage() {
 
         <div className="mt-20 space-y-24">
           <ProjectItem
+            image="/images/growly.webp"
+            title="Growly – Financial calculator"
+            websiteUrl="https://growly-calculator.pages.dev"
+            description="Developed a personal finance planning tool for modeling assets, expenses, mortgage scenarios, investment growth, pension wealth, and solar energy profitability.
+            Built interactive projections and visualizations to support long-term financial decision-making."
+            technologies={['React', 'Vite', 'TypeScript', 'Tailwind']}
+          />
+
+          <ProjectItem
             image="/images/exlibris.webp"
             title="Ex Libris E-Commerce Platform"
             websiteUrl="https://www.exlibris.ch"

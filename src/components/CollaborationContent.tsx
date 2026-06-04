@@ -10,7 +10,7 @@ export function CollaborationContent() {
       </h1>
 
       <p className="mt-6 text-justify text-lg leading-8 text-white/85">
-        Not every business idea makes it onto the IT roadmap.
+        Not every business idea makes it into IT department sprint.
         I help organizations turn overlooked opportunities into practical software solutions.
       </p>
 
