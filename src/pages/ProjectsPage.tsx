@@ -14,7 +14,7 @@ const projectItems: ProjectItemData[] = [
     image: "/images/growly.webp",
     title: "Growly - Financial calculator",
     websiteUrl: "https://growly-calculator.pages.dev",
-    description: "Developed a personal finance planning tool for modeling assets, expenses, mortgage scenarios, investment growth, pension wealth, and solar energy profitability. Built interactive projections and visualizations to support long-term financial decision-making.",
+    description: "Built a modern React-based financial planning platform featuring wealth forecasting, mortgage analysis, investment modeling, pension projections, and solar profitability estimation. Focused on interactive calculations and data visualization.",
     technologies: ['React', 'Vite', 'TypeScript', 'Tailwind'],
     categories: ['Financial'],
   },
@@ -83,24 +83,26 @@ export function ProjectsPage() {
       <div className="absolute inset-0 bg-linear-to-r from-black/10 via-black/70 to-black/85" />
 
       <div className="relative z-10 mx-auto mt-20 max-w-350 pb-24">
-        <p className="mb-5 inline-block bg-black/80 text-lg uppercase tracking-[0.35em] text-cyan-300/80">
-          Projects
-        </p>
+        <div className="flex flex-col items-start gap-4">
+          <p className="inline-block bg-black/80 text-lg uppercase tracking-[0.35em] text-cyan-300/80">
+            Projects
+          </p>
 
-        <div className="flex flex-wrap gap-3">
-          {projectCategories.map((category) => (
-            <button
-              key={category}
-              type="button"
-              onClick={() => setSelectedCategory(category)}
-              className={`rounded-full border px-5 py-2 text-sm font-semibold uppercase tracking-[0.18em] transition-colors ${selectedCategory === category
+          <div className="-ml-3 inline-flex max-w-full flex-wrap gap-3 rounded-2xl border border-white/10 bg-black/75 p-3 shadow-2xl backdrop-blur-sm">
+            {projectCategories.map((category) => (
+              <button
+                key={category}
+                type="button"
+                onClick={() => setSelectedCategory(category)}
+                className={`rounded-full border px-5 py-2 text-sm font-semibold uppercase tracking-[0.18em] transition-colors ${selectedCategory === category
                   ? 'border-cyan-200/80 bg-cyan-300/30 text-cyan-50 shadow-lg shadow-cyan-500/20'
                   : 'border-cyan-300/30 bg-cyan-300/10 text-cyan-100/80 hover:border-cyan-200/60 hover:bg-cyan-300/20 hover:text-cyan-50'
-                }`}
-            >
-              {category}
-            </button>
-          ))}
+                  }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="mt-20 space-y-24">
