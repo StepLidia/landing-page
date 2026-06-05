@@ -14,7 +14,7 @@ const projectItems: ProjectItemData[] = [
     image: "/images/growly.webp",
     title: "Growly - Financial calculator",
     websiteUrl: "https://growly-calculator.pages.dev",
-    description: "Built a modern React-based financial planning platform featuring wealth forecasting, mortgage analysis, investment modeling, pension projections, and solar profitability estimation. Focused on interactive calculations and data visualization.",
+    description: "Built a modern React-based financial planning platform featuring wealth forecasting, mortgage analysis, investment modeling, pension projections, and solar profitability estimation. Focused on interactive calculations and data visualization. Designed and implemented user-friendly planning tools that help individuals evaluate long-term financial outcomes under different assumptions and market conditions. Leveraged TypeScript, reusable React components, and responsive design principles to deliver a fast and engaging user experience.",
     technologies: ['React', 'Vite', 'TypeScript', 'Tailwind'],
     categories: ['Financial'],
   },
@@ -24,7 +24,7 @@ const projectItems: ProjectItemData[] = [
     websiteUrl: "https://www.exlibris.ch",
     description: "Worked on the backend systems and administrative tools supporting the day-to-day operation of a large online book retailer. Responsibilities included developing and maintaining .NET APIs, database design and optimization, supplier data integrations, and tools for importing, validating, and exporting large volumes of book metadata. Contributed to inventory management, order processing workflows, catalog synchronization, data quality improvements, and operational automation. Collaborated closely with business stakeholders to deliver reliable solutions supporting e-commerce operations, supplier onboarding, and internal administration processes.",
     technologies: ['C#', '.NET Core', 'TypeScript', 'Web API', 'SQL Server', 'EF Core', 'Docker', 'OpenShift'],
-    categories: ['E-commerce', 'Management'],
+    categories: ['E-commerce'],
   },
   {
     image: "/images/comparis.webp",
@@ -88,13 +88,13 @@ export function ProjectsPage() {
             Projects
           </p>
 
-          <div className="-ml-3 inline-flex max-w-full flex-wrap gap-3 rounded-2xl border border-white/10 bg-black/75 p-3 shadow-2xl backdrop-blur-sm">
+          <div className="-ml-3 inline-flex max-w-full flex-wrap gap-3 rounded-2xl bg-black/75 p-3">
             {projectCategories.map((category) => (
               <button
                 key={category}
                 type="button"
                 onClick={() => setSelectedCategory(category)}
-                className={`rounded-full border px-5 py-2 text-sm font-semibold uppercase tracking-[0.18em] transition-colors ${selectedCategory === category
+                className={`rounded-full border px-5 py-2 text-sm uppercase tracking-[0.35em] transition-colors ${selectedCategory === category
                   ? 'border-cyan-200/80 bg-cyan-300/30 text-cyan-50 shadow-lg shadow-cyan-500/20'
                   : 'border-cyan-300/30 bg-cyan-300/10 text-cyan-100/80 hover:border-cyan-200/60 hover:bg-cyan-300/20 hover:text-cyan-50'
                   }`}
