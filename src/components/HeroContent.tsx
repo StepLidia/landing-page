@@ -25,7 +25,7 @@ export function HeroContent() {
           View projects
         </Link>
         <a
-          href="/misc/CV_Enterprise_Stepanova.pdf"
+          href="/misc/CV_Homepage.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/20 bg-white/10 shadow-2xl backdrop-blur"
