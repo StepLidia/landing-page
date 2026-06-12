@@ -33,7 +33,7 @@ const personJsonLd = {
 const sectionMetadata = {
   home: {
     title: 'Lidia Stepanova | Full-Stack Software Engineer',
-    description: 'Personal portfolio of Lidia Stepanova, a full-stack software engineer building React, .NET, TypeScript, cloud, financial, scientific, and business software.',
+    description: 'Personal portfolio of Lidia Stepanova, a full-stack software engineer designing and building modern web applications, financial tools, scientific software, and business systems.',
     path: '/',
   },
   about: {
