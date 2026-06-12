@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { SeoMetadata } from "../components/SeoMetadata";
 import { TechnologyBadges } from "../components/TechnologyBadges";
 
 const projectCategories = ['All', 'Scientific', 'Financial', 'E-commerce', 'Management'] as const;
@@ -13,7 +14,7 @@ const projectItems: ProjectItemData[] = [
   {
     image: "/images/growly.webp",
     title: "Growly - Financial calculator",
-    websiteUrl: "https://growly-calculator.pages.dev",
+    websiteUrl: "https://swiss-growly.com",
     description: "Built a modern React-based financial planning platform featuring wealth forecasting, mortgage analysis, investment modeling, pension projections, and solar profitability estimation. Focused on interactive calculations and data visualization. Designed and implemented user-friendly planning tools that help individuals evaluate long-term financial outcomes under different assumptions and market conditions. Leveraged TypeScript, reusable React components, and responsive design principles to deliver a fast and engaging user experience.",
     technologies: ['React', 'Vite', 'TypeScript', 'Tailwind'],
     categories: ['Financial'],
@@ -67,8 +68,38 @@ export function ProjectsPage() {
     ? projectItems
     : projectItems.filter((project) => project.categories.includes(selectedCategory));
 
+  const projectsJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Software Engineering Projects by Lidia Stepanova',
+    description: 'Selected full-stack software engineering projects across financial planning, e-commerce, real estate, mortgage management, manufacturing systems, and scientific simulation.',
+    hasPart: {
+      '@type': 'ItemList',
+      itemListElement: projectItems.map((project, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'CreativeWork',
+          name: project.title,
+          description: project.description,
+          url: project.websiteUrl,
+          image: project.image,
+          keywords: project.technologies.join(', '),
+        },
+      })),
+    },
+  };
+
   return (
     <div className="relative overflow-hidden">
+      <SeoMetadata
+        title="Projects | Lidia Stepanova"
+        description="Selected software engineering projects by Lidia Stepanova, covering financial calculators, e-commerce platforms, real estate lead management, mortgage systems, manufacturing software, and scientific simulation."
+        path="/projects"
+        imagePath="/images/projects.webp"
+        jsonLd={projectsJsonLd}
+      />
+
       <div
         className="absolute inset-0"
         style={{
