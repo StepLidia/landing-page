@@ -15,7 +15,7 @@ const projectItems: ProjectItemData[] = [
     image: "/images/growly.webp",
     title: "Growly - Financial calculator",
     websiteUrl: "https://swiss-growly.com",
-    description: "Built a modern React-based financial planning platform featuring wealth forecasting, mortgage analysis, investment modeling, pension projections, and solar profitability estimation. Focused on interactive calculations and data visualization. Designed and implemented user-friendly planning tools that help individuals evaluate long-term financial outcomes under different assumptions and market conditions. Leveraged TypeScript, reusable React components, and responsive design principles to deliver a fast and engaging user experience.",
+    description: "Built a modern React-based financial planning platform featuring wealth forecasting, mortgage analysis, car financing, investment modeling and pension projections. Focused on interactive calculations and data visualization. Designed and implemented user-friendly planning tools that help individuals evaluate long-term financial outcomes under different assumptions and market conditions. Leveraged TypeScript, reusable React components, and responsive design principles to deliver a fast and engaging user experience.",
     technologies: ['React', 'Vite', 'TypeScript', 'Tailwind'],
     categories: ['Financial'],
   },
