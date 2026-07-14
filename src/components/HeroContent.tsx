@@ -14,7 +14,7 @@ export function HeroContent() {
 
       <p className="mt-6 max-w-xl text-lg leading-8 text-white/65">
         Personal page for software engineering, AI experiments,
-        scientific ideas, and visual digital projects.
+        scientific ideas and visual digital projects.
       </p>
 
       <div className="mt-10 flex flex-wrap gap-4">

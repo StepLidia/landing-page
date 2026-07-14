@@ -33,22 +33,22 @@ const personJsonLd = {
 const sectionMetadata = {
   home: {
     title: 'Lidia Stepanova | Full-Stack Software Engineer',
-    description: 'Personal portfolio of Lidia Stepanova, a full-stack software engineer designing and building modern web applications, financial tools, scientific software, and business systems.',
+    description: 'Personal portfolio of Lidia Stepanova, a full-stack software engineer designing and building modern web applications, financial tools, scientific software and business systems.',
     path: '/',
   },
   about: {
     title: 'About Lidia Stepanova | Full-Stack Software Engineer',
-    description: 'Learn about Lidia Stepanova, a full-stack software engineer with 10+ years of experience across .NET, React, TypeScript, SQL Server, Azure, Docker, and scientific software.',
+    description: 'Learn about Lidia Stepanova, a full-stack software engineer with 10+ years of experience across .NET, React, TypeScript, SQL Server, Azure, Docker and scientific software.',
     path: '/?section=about',
   },
   collaboration: {
     title: 'Custom Software Collaboration | Lidia Stepanova',
-    description: 'Custom web applications, APIs, business tools, cloud-ready systems, and modern websites tailored to practical operational needs.',
+    description: 'Custom web applications, APIs, business tools, cloud-ready systems and modern websites tailored to practical operational needs.',
     path: '/?section=collaboration',
   },
   contact: {
     title: 'Contact Lidia Stepanova | Software Engineering',
-    description: 'Contact Lidia Stepanova for software engineering collaboration, custom business applications, React and .NET development, APIs, and cloud-ready systems.',
+    description: 'Contact Lidia Stepanova for software engineering collaboration, custom business applications, React and .NET development, APIs and cloud-ready systems.',
     path: '/?section=contact',
   },
 } as const;

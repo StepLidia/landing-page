@@ -32,9 +32,9 @@ export function AboutContent() {
       <p className="mt-6 text-justify text-lg leading-8 text-white/85">
         Throughout my career, I have developed solutions using .NET, Entity Framework
         Core, SQL Server, React, TypeScript, JavaScript, Tailwind CSS, Docker,
-        Kubernetes, Azure, and modern DevOps practices. My experience spans both
+        Kubernetes, Azure and modern DevOps practices. My experience spans both
         backend and frontend development across Windows and Linux environments,
-        including testing, cloud infrastructure, project delivery, and system design.
+        including testing, cloud infrastructure, project delivery and system design.
       </p>
 
       <p className="mt-6 text-justify text-lg leading-8 text-white/85">

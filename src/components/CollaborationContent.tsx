@@ -17,14 +17,14 @@ export function CollaborationContent() {
       <p className="mt-6 text-justify text-lg leading-8 text-white/85">
         Need a system to streamline business processes, replace spreadsheets,
         integrate data, or solve a specific operational challenge? I develop custom
-        web applications, APIs, and business tools designed around your requirements.
+        web applications, APIs and business tools designed around your requirements.
         Solutions can be delivered as containerized applications for deployment
         within your existing infrastructure or in the cloud of your choice.
       </p>
 
       <p className="mt-6 text-justify text-lg leading-8 text-white/85">
         I can also create modern websites that help businesses showcase services,
-        attract customers, and manage appointments online.
+        attract customers and manage appointments online.
       </p>
     </>
   )
